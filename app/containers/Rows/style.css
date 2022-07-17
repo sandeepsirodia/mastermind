@@ -1,0 +1,49 @@
+.selected-row {
+  border: 1px solid #eaebe9;
+}
+
+.select-ball {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 5px;
+  height: max-content;
+  width: max-content;
+}
+
+.selectedBall {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+.disabled {
+  cursor: default;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.rows {
+  display: grid;
+  grid-gap: 5px;
+}
+
+.single-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+  grid-gap: 5px;
+  width: max-content;
+  padding: 10px 5px;
+}
+
+.button-check {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.suggestions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  width: max-content;
+  line-height: 14px;
+}

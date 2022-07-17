@@ -1,0 +1,35 @@
+body {
+  margin: 30px;
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  grid-gap: 30px;
+  place-content: center;
+  grid-auto-flow: row;
+}
+.game {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 30px;
+}
+
+.heading {
+  font-size: 50px;
+}
+
+.heading span {
+  padding: 0px 7px;
+}
+
+.modal {
+  height: 100%;
+  width: 100%;
+}
+
+.success-modal {
+  display: grid;
+  place-content: center;
+  padding: 50px;
+}
