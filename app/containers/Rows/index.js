@@ -80,7 +80,7 @@ Rows.propTypes = {
   responses: PropTypes.array,
   activeRowIndex: PropTypes.number,
   updateResponses: PropTypes.func,
-  showRowCheckButton: PropTypes.bool,
+  showRowCheckButton: PropTypes.number,
   handleRowCheck: PropTypes.func,
 };
 
