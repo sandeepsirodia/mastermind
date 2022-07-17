@@ -16,6 +16,7 @@ const initialState = {
   activeRowIndex: 0,
   correctSolution: false,
   showRowCheckButton: undefined,
+  showModal: false,
 };
 
 const reducer = (reducerState, action) => {
@@ -26,6 +27,7 @@ const reducer = (reducerState, action) => {
         activeRowIndex,
         showRowCheckButton,
         correctSolution,
+        showModal,
       } = action.payload;
 
       return {
@@ -34,6 +36,7 @@ const reducer = (reducerState, action) => {
         activeRowIndex,
         showRowCheckButton,
         correctSolution,
+        showModal,
       };
     }
 

@@ -24,6 +24,7 @@ function App() {
     activeRowIndex,
     correctSolution,
     showRowCheckButton,
+    showModal,
   } = state;
 
   const getRandomBalls = () => ALL_BALLS[generateRandomNumberByLength(5.99)];
@@ -124,7 +125,8 @@ function App() {
       payload: {
         responses: newResponses,
         correctSolution: isCorrectResponse,
-        showRowCheckButton: false,
+        showModal: isCorrectResponse || activeRowIndex === 9,
+        showRowCheckButton: undefined,
         activeRowIndex: activeRowIndex + 1,
       },
     });
@@ -159,10 +161,16 @@ function App() {
         <SelectBall updateBall={updateBall} selectedBall={selectedBall} />
       </div>
 
-      <Modal visible={correctSolution} footer={null} closable={false}>
+      <Modal visible={showModal} footer={null} closable={false}>
         <div className="success-modal">
           <h1>
-            Congratulations <>🎉</>
+            {correctSolution ? (
+              <span>
+                Congratulations <>🎉</>
+              </span>
+            ) : (
+              <>Ah! you were not able to guess!!</>
+            )}
           </h1>
           <Button type="primary" onClick={() => handleNewGame()}>
             Play Again
